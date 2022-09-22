@@ -7,13 +7,11 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject _gameObject;
-    [SerializeField]
-    private Transform _transform;
 
     [SerializeField]
     private bool _randomizePosition = false;
     [SerializeField]
-    private float _positionX, _positionY;
+    private Vector2 _maxOffset;
 
     [SerializeField]
     private bool _randomizeAngle = false;
@@ -24,13 +22,13 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        Vector3 pos = _transform.position;
-        Quaternion rot = _transform.rotation;
+        Vector3 pos = transform.position;
+        Quaternion rot = transform.rotation;
 
         if (_randomizePosition)
         {
-            pos.x += Random.Range(-_positionX, _positionX);
-            pos.y += Random.Range(-_positionY, _positionY);
+            pos.x += Random.Range(-_maxOffset.x, _maxOffset.x);
+            pos.y += Random.Range(-_maxOffset.y, _maxOffset.y);
         }
 
         if (_randomizeAngle)

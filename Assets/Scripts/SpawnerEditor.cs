@@ -8,11 +8,9 @@ using UnityEngine;
 public class SpawnerEditor : Editor
 {
     SerializedProperty _gameObject;
-    SerializedProperty _transform;
 
     SerializedProperty _randomizePosition;
-    SerializedProperty _positionX;
-    SerializedProperty _positionY;
+    SerializedProperty _maxOffset;
 
     SerializedProperty _randomizeAngle;
     SerializedProperty _angle;
@@ -21,10 +19,8 @@ public class SpawnerEditor : Editor
     {
 
         _gameObject = serializedObject.FindPropertyOrFail("_gameObject");
-        _transform = serializedObject.FindPropertyOrFail("_transform");
         _randomizePosition = serializedObject.FindPropertyOrFail("_randomizePosition");
-        _positionX = serializedObject.FindPropertyOrFail("_positionX");
-        _positionY = serializedObject.FindPropertyOrFail("_positionY");
+        _maxOffset = serializedObject.FindPropertyOrFail("_maxOffset");
         _randomizeAngle = serializedObject.FindPropertyOrFail("_randomizeAngle");
         _angle = serializedObject.FindPropertyOrFail("_angle");
     }
@@ -32,7 +28,6 @@ public class SpawnerEditor : Editor
     public override void OnInspectorGUI()
     {
         EditorGUILayout.ObjectField(_gameObject);
-        EditorGUILayout.PropertyField(_transform);
 
         EditorGUILayout.Space();
 
@@ -42,11 +37,11 @@ public class SpawnerEditor : Editor
             );
         if (_randomizePosition.boolValue)
         {
-            var bar = EditorGUILayout.Vector2Field
-                ("", new Vector2(_positionX.floatValue, _positionY.floatValue));
-
-            _positionX.floatValue = bar.x;
-            _positionY.floatValue = bar.y;
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.Space();
+            _maxOffset.vector2Value = EditorGUILayout.Vector2Field
+                ("", _maxOffset.vector2Value * 2f) * 0.5f;
+            EditorGUILayout.EndHorizontal();
         }
 
         EditorGUILayout.Space();
@@ -55,6 +50,7 @@ public class SpawnerEditor : Editor
             "Randomize Angle",
             _randomizeAngle.boolValue
             );
+
         if (_randomizeAngle.boolValue)
             _angle.floatValue = EditorGUILayout.Slider(
                 "Angle",
