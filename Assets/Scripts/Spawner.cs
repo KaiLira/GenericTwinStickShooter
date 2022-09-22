@@ -4,32 +4,23 @@ using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 
-[System.Serializable]
-public struct Position
-{
-    public float x;
-    public float y;
-}
-
 public class Spawner : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField]
-    private GameObject _prefab;
+    public GameObject _gameObject;
     [SerializeField]
     private Transform _transform;
 
-    [Space(15)]
-    [Header("Randomization")]
-    [SerializeField]
-    private bool _randomizeAngle = false;
-    [SerializeField]
-    [Range(0, 360)]
-    private float _angle;
     [SerializeField]
     private bool _randomizePosition = false;
     [SerializeField]
-    private Position _position;
+    private float _positionX, _positionY;
+
+    [SerializeField]
+    private bool _randomizeAngle = false;
+    [SerializeField]
+    [Range(0, 180)]
+    private float _angle;
+
 
     public void Spawn()
     {
@@ -38,8 +29,8 @@ public class Spawner : MonoBehaviour
 
         if (_randomizePosition)
         {
-            pos.x += Random.Range(-_position.x, _position.x);
-            pos.y += Random.Range(-_position.y, _position.y);
+            pos.x += Random.Range(-_positionX, _positionX);
+            pos.y += Random.Range(-_positionY, _positionY);
         }
 
         if (_randomizeAngle)
@@ -49,6 +40,6 @@ public class Spawner : MonoBehaviour
                                   Random.Range(-_angle, _angle)
                               );
 
-        GameObject.Instantiate(_prefab, pos, rot);
+        GameObject.Instantiate(_gameObject, pos, rot);
     }
 }

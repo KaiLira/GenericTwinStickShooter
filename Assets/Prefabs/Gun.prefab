@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6363795276632561316}
-  - component: {fileID: 6363795276632561310}
   - component: {fileID: 6363795276632561314}
   - component: {fileID: 6363795276632561312}
   - component: {fileID: 6363795276632561313}
@@ -68,49 +67,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6363795276632561310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6363795276632561319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72bde6379c8d1214f9df61b6d068c1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _axisName: Fire1
-  _onDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6363795276632561314}
-        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
-        m_MethodName: TriggerPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6363795276632561314}
-        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
-        m_MethodName: TriggerReleased
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &6363795276632561314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,11 +166,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7091df282faa88c4895e75bd18ae5a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 4282617446023477724, guid: 593ca080903828c4ba128b464e74b851, type: 3}
+  _gameObject: {fileID: 4282617446023477724, guid: 593ca080903828c4ba128b464e74b851, type: 3}
   _transform: {fileID: 6363795275384927601}
-  _randomizeAngle: 1
-  _angle: 10
   _randomizePosition: 1
-  _position:
-    x: 0
-    y: 0.2
+  _positionX: 0
+  _positionY: 0
+  _randomizeAngle: 0
+  _angle: 10

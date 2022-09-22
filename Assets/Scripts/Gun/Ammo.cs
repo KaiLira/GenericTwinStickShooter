@@ -25,6 +25,12 @@ public class Ammo : MonoBehaviour
     private void _fillAmmo()
     {
         _ammo = _maxAmmo;
+        _inMagazine = _magazineSize;
+    }
+
+    void Start()
+    {
+        _fillAmmo();        
     }
 
     public void Fire()
