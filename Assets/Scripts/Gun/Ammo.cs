@@ -20,6 +20,8 @@ public class Ammo : MonoBehaviour
     private bool _reloading = false;
     [SerializeField]
     private UnityEvent _fire;
+    [SerializeField]
+    private UnityEvent _failedFire;
 
     [ContextMenu("Fill ammo")]
     private void _fillAmmo()
@@ -44,7 +46,7 @@ public class Ammo : MonoBehaviour
             _fire.Invoke();
         }
         else
-            Reload();
+            _failedFire?.Invoke();
     }
 
     public void Reload()

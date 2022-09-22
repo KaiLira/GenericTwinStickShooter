@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7c464a24fa47949b58a4686ab5a7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fireDelay: 0.2
   _fire:
     m_PersistentCalls:
       m_Calls:
@@ -111,7 +112,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _fireDelay: 0.2
 --- !u!114 &6363795276632561312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +133,21 @@ MonoBehaviour:
       - m_Target: {fileID: 6363795276632561313}
         m_TargetAssemblyTypeName: Multishot, Assembly-CSharp
         m_MethodName: Fire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _failedFire:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6363795276632561312}
+        m_TargetAssemblyTypeName: Ammo, Assembly-CSharp
+        m_MethodName: Reload
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

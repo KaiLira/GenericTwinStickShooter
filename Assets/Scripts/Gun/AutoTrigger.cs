@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class AutoTrigger : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _fire;
     [SerializeField] private float _fireDelay;
+    [SerializeField] private UnityEvent _fire;
     private float _delayCounter = 0f;
     private bool _firing = false;
 
