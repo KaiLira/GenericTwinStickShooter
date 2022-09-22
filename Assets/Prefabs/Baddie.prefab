@@ -36,8 +36,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6443210784557251153}
   - {fileID: 281739307072425169}
-  - {fileID: 7572630690118743288}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
   _rangeEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7572630690118743294}
+      - m_Target: {fileID: 6443210784557251159}
         m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
         m_MethodName: TriggerPressed
         m_Mode: 1
@@ -241,7 +241,7 @@ MonoBehaviour:
   _rangeExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7572630690118743294}
+      - m_Target: {fileID: 6443210784557251159}
         m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
         m_MethodName: TriggerReleased
         m_Mode: 1
@@ -283,7 +283,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 281739306740312887}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &281739307072425168
 SpriteRenderer:
@@ -337,7 +337,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &3551050286816666204
+--- !u!1001 &88484317025414389
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -346,7 +346,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6363795276632561316, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6363795276632561316, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
       propertyPath: m_LocalPosition.x
@@ -394,15 +394,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
---- !u!4 &7572630690118743288 stripped
+--- !u!4 &6443210784557251153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6363795276632561316, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
-  m_PrefabInstance: {fileID: 3551050286816666204}
+  m_PrefabInstance: {fileID: 88484317025414389}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7572630690118743294 stripped
+--- !u!114 &6443210784557251159 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6363795276632561314, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
-  m_PrefabInstance: {fileID: 3551050286816666204}
+  m_PrefabInstance: {fileID: 88484317025414389}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
