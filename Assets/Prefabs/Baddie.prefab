@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 281739306740312884}
   - component: {fileID: 281739306740312885}
   - component: {fileID: 281739306740312889}
+  - component: {fileID: 5967817379033309530}
+  - component: {fileID: 8152524010562079726}
   - component: {fileID: 281739306740312886}
   - component: {fileID: 281739306740312888}
   - component: {fileID: 281739306740312891}
@@ -32,7 +34,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281739306740312882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.89, y: 2.65, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -140,6 +142,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5967817379033309530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281739306740312882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5692bd8013c9b96488ec9f6c31da576e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tag: Player
+--- !u!114 &8152524010562079726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281739306740312882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c112075be405cb94cbb7a8fd29d1a823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &281739306740312886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df94b5ced3c7364c9d6d1e670459e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 0}
   _turnRate: 10
 --- !u!114 &281739306740312888
 MonoBehaviour:
@@ -221,7 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6570067567b1014899095911cacbcb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   _range: 50
   _rangeEntered:
     m_PersistentCalls:

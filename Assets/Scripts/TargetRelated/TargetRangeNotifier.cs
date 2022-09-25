@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(TargetHolder))]
 public class TargetRangeNotifier : MonoBehaviour
 {
-    [SerializeField]
-    private Transform target;
     [SerializeField]
     [Min(0f)]
     private float _range;
@@ -14,12 +13,19 @@ public class TargetRangeNotifier : MonoBehaviour
     private UnityEvent _rangeEntered;
     [SerializeField]
     private UnityEvent _rangeExited;
+    private TargetHolder _holder;
 
     private bool _inRange = false;
 
+    private void Start()
+    {
+        _holder = GetComponent<TargetHolder>();
+    }
+
     void Update()
     {
-        float distance = Vector2.Distance(transform.position, target.position);
+        float distance = Vector2.Distance
+            (transform.position, _holder.Target.transform.position);
 
         if (_inRange && distance > _range)
             _rangeExited?.Invoke();
