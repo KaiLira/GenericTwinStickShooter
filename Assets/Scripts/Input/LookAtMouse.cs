@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class LookAtMouse : MonoBehaviour
 {
+    private Vector2 _prevMouse = Vector2.zero;
+
     void Update()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 pos = transform.position;
+        Vector2 mousePos = Input.mousePosition;
 
-        transform.rotation = Utils.Rotation(Utils.Angle(pos, mousePos));
+        if (_prevMouse == mousePos)
+            return;
+
+        _prevMouse = mousePos;
+        transform.rotation = Utils.Rotation(
+            Utils.Angle(transform.position,
+            Camera.main.ScreenToWorldPoint(mousePos)
+            )
+        );
     }
 }
