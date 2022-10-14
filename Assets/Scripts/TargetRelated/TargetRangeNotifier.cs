@@ -15,11 +15,13 @@ public class TargetRangeNotifier : MonoBehaviour
     private UnityEvent _rangeExited;
     private TargetHolder _holder;
 
-    private bool _inRange = false;
+    private bool _inRange;
 
     private void Start()
     {
         _holder = GetComponent<TargetHolder>();
+        _inRange = _range <= Vector2.Distance
+            (transform.position, _holder.Target.transform.position);
     }
 
     void Update()
@@ -28,8 +30,14 @@ public class TargetRangeNotifier : MonoBehaviour
             (transform.position, _holder.Target.transform.position);
 
         if (_inRange && distance > _range)
+        {
+            _inRange = false;
             _rangeExited?.Invoke();
+        }
         else if (!_inRange && distance <= _range)
+        {
             _rangeEntered?.Invoke();
+            _inRange = true;
+        }
     }
 }

@@ -40,7 +40,6 @@ Transform:
   m_Children:
   - {fileID: 6443210784557251153}
   - {fileID: 281739307072425169}
-  - {fileID: 3642221331867357154}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -168,6 +167,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c112075be405cb94cbb7a8fd29d1a823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _targetLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &281739306740312886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2759aaf20211b0f4ebe7a53c25d543d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   _speed: 10
   _direction: {x: 1, y: 0}
 --- !u!114 &281739306740312891
@@ -211,7 +217,7 @@ MonoBehaviour:
   _onChangeHealth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3642221331867357152}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -451,74 +457,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7c464a24fa47949b58a4686ab5a7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &4677774925017794603
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 281739306740312887}
-    m_Modifications:
-    - target: {fileID: 8241884751815215048, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_Name
-      value: BloodEmmiter
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241884751815215051, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
---- !u!198 &3642221331867357152 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8241884751815215051, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-  m_PrefabInstance: {fileID: 4677774925017794603}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3642221331867357154 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8241884751815215049, guid: f79abc6c63c75b34eb876c9b3b87ec04, type: 3}
-  m_PrefabInstance: {fileID: 4677774925017794603}
-  m_PrefabAsset: {fileID: 0}

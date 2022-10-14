@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TargetHolder))]
-public class RotateTowardsTarget : MonoBehaviour
+public class RotateObjectTowardsTarget : MonoBehaviour
 {
+    [SerializeField]
+    private Transform _object;
     [SerializeField]
     private float _turnRate;
     private TargetHolder _holder;
@@ -16,14 +18,14 @@ public class RotateTowardsTarget : MonoBehaviour
 
     void Update()
     {
-        Vector2 posSelf = transform.position;
+        Vector2 posObj = _object.position;
         Vector2 posTarget = _holder.Target.transform.position;
-        float angle = Utils.Angle(posSelf, posTarget);
+        float angle = Utils.Angle(posObj, posTarget);
 
-        transform.rotation = Quaternion.Lerp(
+        _object.rotation = Quaternion.Lerp(
             transform.rotation,
             Utils.Rotation(angle),
             _turnRate * Time.deltaTime
-            );
+        );
     }
 }
