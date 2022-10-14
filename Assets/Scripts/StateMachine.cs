@@ -30,4 +30,13 @@ public class StateMachine : MonoBehaviour
         if (_states.TryPeek(out last))
             last.SetActive(true);
     }
+
+    public void SetState(GameObject state)
+    {
+        if (_states.TryPop(out var last))
+            last.SetActive(false);
+
+        state.SetActive(true);
+        _states = new(new GameObject[1] {state});
+    }
 }

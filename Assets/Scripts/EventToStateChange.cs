@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class EventToStateChange : MonoBehaviour
 {
+    [System.Serializable]
+    public enum ChangeType
+    {
+        SetState,
+        PushState,
+        PopState,
+    }
+
+    [SerializeField]
+    private GameObject _stateMachine;
     [SerializeField]
     private GameObject state;
     [SerializeField]
-    private GameObject _stateMachine;
+    private ChangeType _changeType = ChangeType.SetState;
     private StateMachine _fsm;
 
     void Start()
@@ -17,9 +27,17 @@ public class EventToStateChange : MonoBehaviour
 
     public void ChangeState()
     {
-        if (state == null)
-            _fsm.PopState();
-        else
-            _fsm.PushState(state);
+        switch (_changeType)
+        {
+            case ChangeType.PushState:
+                _fsm.PushState(state);
+                break;
+            case ChangeType.PopState:
+                _fsm.PopState();
+                break;
+            case ChangeType.SetState:
+                _fsm.SetState(state);
+                break;
+        }
     }
 }
