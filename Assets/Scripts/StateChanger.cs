@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventToStateChange : MonoBehaviour
+public class StateChanger : MonoBehaviour
 {
     [System.Serializable]
     public enum ChangeType
