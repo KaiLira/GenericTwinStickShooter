@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TranslateInDirection : MonoBehaviour
+public class TranslateObjectInDirection : MonoBehaviour
 {
+    [SerializeField] private Transform _object;
     [SerializeField] private float _speed;
     [SerializeField] private Vector2 _direction = Vector2.right;
 
@@ -11,8 +12,9 @@ public class TranslateInDirection : MonoBehaviour
     {
         _direction = _direction.normalized;
     }
+
     void Update()
     {
-        transform.Translate(_speed * Time.deltaTime * _direction);
+        _object.Translate(_speed * Time.deltaTime * _direction);
     }
 }

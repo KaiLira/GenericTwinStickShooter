@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(TargetHolder))]
 public class TargetRangeNotifier : MonoBehaviour
 {
     [SerializeField]
@@ -13,23 +12,31 @@ public class TargetRangeNotifier : MonoBehaviour
     private UnityEvent _rangeEntered;
     [SerializeField]
     private UnityEvent _rangeExited;
-    private TargetHolder _holder;
+    [SerializeField]
+    private TargetHolder _targetHolder;
 
-    private bool _inRange = false;
+    private bool _inRange;
 
     private void Start()
     {
-        _holder = GetComponent<TargetHolder>();
+        _inRange = _range <= Vector2.Distance
+            (transform.position, _targetHolder.Target.transform.position);
     }
 
     void Update()
     {
         float distance = Vector2.Distance
-            (transform.position, _holder.Target.transform.position);
+            (transform.position, _targetHolder.Target.transform.position);
 
         if (_inRange && distance > _range)
+        {
+            _inRange = false;
             _rangeExited?.Invoke();
+        }
         else if (!_inRange && distance <= _range)
+        {
             _rangeEntered?.Invoke();
+            _inRange = true;
+        }
     }
 }
