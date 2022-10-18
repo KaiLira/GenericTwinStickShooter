@@ -7,36 +7,30 @@ public class StateChanger : MonoBehaviour
     [System.Serializable]
     public enum ChangeType
     {
-        SetState,
-        PushState,
-        PopState,
+        SetState = 0,
+        PushState = 1,
+        PopState = 2,
     }
 
     [SerializeField]
-    private GameObject _stateMachine;
+    private StateMachine _stateMachine;
     [SerializeField]
-    private GameObject state;
+    private GameObject _state;
     [SerializeField]
     private ChangeType _changeType = ChangeType.SetState;
-    private StateMachine _fsm;
-
-    void Start()
-    {
-        _fsm = _stateMachine.GetComponent<StateMachine>();
-    }
 
     public void ChangeState()
     {
         switch (_changeType)
         {
             case ChangeType.PushState:
-                _fsm.PushState(state);
+                _stateMachine.PushState(_state);
                 break;
             case ChangeType.PopState:
-                _fsm.PopState();
+                _stateMachine.PopState();
                 break;
             case ChangeType.SetState:
-                _fsm.SetState(state);
+                _stateMachine.SetState(_state);
                 break;
         }
     }
