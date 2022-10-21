@@ -30,8 +30,12 @@ public class Pool : MonoBehaviour
         }
     }
 
-    public void Spawn(Vector3 pos, Quaternion rot)
+    public int Spawn(Vector3 pos, Quaternion rot)
     {
-        return;
+        int id = _inactives.Pop();
+        GameObject instance = transform.GetChild(id).gameObject;
+        instance.transform.SetPositionAndRotation(pos, rot);
+        instance.SetActive(true);
+        return id;
     }
 }
