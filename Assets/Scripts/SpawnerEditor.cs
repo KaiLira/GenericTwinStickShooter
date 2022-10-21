@@ -7,7 +7,7 @@ using UnityEngine;
 [CustomEditor(typeof(Spawner))]
 public class SpawnerEditor : Editor
 {
-    SerializedProperty _gameObject;
+    SerializedProperty _pool;
 
     SerializedProperty _randomizePosition;
     SerializedProperty _maxOffset;
@@ -18,7 +18,7 @@ public class SpawnerEditor : Editor
     public void OnEnable()
     {
 
-        _gameObject = serializedObject.FindPropertyOrFail("_gameObject");
+        _pool = serializedObject.FindPropertyOrFail("_pool");
         _randomizePosition = serializedObject.FindPropertyOrFail("_randomizePosition");
         _maxOffset = serializedObject.FindPropertyOrFail("_maxOffset");
         _randomizeAngle = serializedObject.FindPropertyOrFail("_randomizeAngle");
@@ -27,7 +27,7 @@ public class SpawnerEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        EditorGUILayout.ObjectField(_gameObject);
+        EditorGUILayout.ObjectField(_pool);
 
         EditorGUILayout.Space();
 
@@ -35,6 +35,7 @@ public class SpawnerEditor : Editor
             "Randomize Position",
             _randomizePosition.boolValue
             );
+
         if (_randomizePosition.boolValue)
         {
             EditorGUILayout.BeginHorizontal();

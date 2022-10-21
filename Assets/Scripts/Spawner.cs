@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject _gameObject;
-
+    [SerializeField, DisallowNull]
+    private Pool _pool;
     [SerializeField]
     private bool _randomizePosition = false;
     [SerializeField]
@@ -38,6 +39,6 @@ public class Spawner : MonoBehaviour
                                   Random.Range(-_angle, _angle)
                               );
 
-        GameObject.Instantiate(_gameObject, pos, rot);
+        _pool.Spawn(pos, rot);
     }
 }
