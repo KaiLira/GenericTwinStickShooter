@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _object: {fileID: 8966143161769305958}
   _speed: 10
-  _direction: {x: 1, y: 0}
+  _directionHolder: {fileID: 6553625320859756067}
 --- !u!114 &5772893377260103414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 5238169957156846681}
   - component: {fileID: 4253593927695456966}
   - component: {fileID: 8412444817493877305}
+  - component: {fileID: 6553625320859756067}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -351,6 +352,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 8749490604101629685}
+--- !u!114 &6553625320859756067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698357594395840547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a56aeea4c8c1d34180fe878e43713ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _diection: {x: 1, y: 0}
 --- !u!1 &2950721391712440599
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _object: {fileID: 8966143161769305958}
   _speed: 10
-  _direction: {x: 1, y: 0}
+  _directionHolder: {fileID: 6553625320859756067}
 --- !u!114 &7940478361478618980
 MonoBehaviour:
   m_ObjectHideFlags: 0
