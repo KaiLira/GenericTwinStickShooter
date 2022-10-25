@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7091df282faa88c4895e75bd18ae5a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameObject: {fileID: 4282617446023477724, guid: 593ca080903828c4ba128b464e74b851, type: 3}
+  _pool: {fileID: 11400000, guid: 925248853a061f545adc9c2f66d94de4, type: 2}
   _randomizePosition: 1
   _maxOffset: {x: 0, y: 0.1}
   _randomizeAngle: 1
