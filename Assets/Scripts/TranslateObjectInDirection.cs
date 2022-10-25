@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class TranslateObjectInDirection : MonoBehaviour
 {
-    [SerializeField] private Transform _object;
-    [SerializeField] private float _speed;
-    [SerializeField] private DirectionHolder _directionHolder;
+    [SerializeField]
+    private Transform _object;
+    [SerializeField]
+    private float _speed;
+    [SerializeField]
+    private DirectionHolder _directionHolder;
 
     void Update()
     {
