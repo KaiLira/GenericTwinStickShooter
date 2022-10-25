@@ -22,13 +22,18 @@ public class StateMachine : MonoBehaviour
         _states.Push(state);
     }
 
-    public void PopState()
+    public void PopStates(int count = 1)
     {
+        if (count <= 0)
+            return;
+
         var last = _states.Pop();
         last.SetActive(false);
 
         if (_states.TryPeek(out last))
             last.SetActive(true);
+
+        PopStates(count - 1);
     }
 
     public void SetState(GameObject state)
