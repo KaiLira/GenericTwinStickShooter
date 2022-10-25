@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class TranslateObjectInDirection : MonoBehaviour
 {
-    [SerializeField] private Transform _object;
-    [SerializeField] private float _speed;
-    [SerializeField] private Vector2 _direction = Vector2.right;
-
-    void Start()
-    {
-        _direction = _direction.normalized;
-    }
+    [SerializeField]
+    private Transform _object;
+    [SerializeField]
+    private float _speed;
+    [SerializeField]
+    private DirectionHolder _directionHolder;
 
     void Update()
     {
-        _object.Translate(_speed * Time.deltaTime * _direction);
+        _object.Translate(_speed * Time.deltaTime * _directionHolder.Direction);
     }
 }

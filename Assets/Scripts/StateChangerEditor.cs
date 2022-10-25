@@ -10,13 +10,14 @@ public class StateChangerEditor : Editor
     SerializedProperty _stateMachine;
     SerializedProperty _state;
     SerializedProperty _changeType;
-    GameObject _fsmHolder;
+    SerializedProperty _popCount;
 
     public void OnEnable()
     {
         _stateMachine = serializedObject.FindPropertyOrFail("_stateMachine");
         _state = serializedObject.FindPropertyOrFail("_state");
         _changeType = serializedObject.FindPropertyOrFail("_changeType");
+        _popCount = serializedObject.FindPropertyOrFail("_popCount");
     }
 
     public override void OnInspectorGUI()
@@ -38,9 +39,11 @@ public class StateChangerEditor : Editor
         // _state
         if (
             (StateChanger.ChangeType) _changeType.enumValueIndex !=
-            StateChanger.ChangeType.PopState
+            StateChanger.ChangeType.PopStates
         )
             EditorGUILayout.ObjectField(_state);
+        else
+            _popCount.intValue = EditorGUILayout.IntField("Pop Count", _popCount.intValue);
 
         serializedObject.ApplyModifiedProperties();
     }

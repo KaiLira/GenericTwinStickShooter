@@ -11,6 +11,9 @@ public class Timer : MonoBehaviour
     [SerializeField] private UnityEvent _callback;
     private float _time = 0;
 
+    public bool Running
+        { get => _running; }
+
     void Update()
     {
         if (_running)
@@ -19,15 +22,16 @@ public class Timer : MonoBehaviour
             if (_time >= _duration)
             {
                 _callback?.Invoke();
-
-                if (_repeat)
-                    _time = 0;
-                else
-                {
-                    _time = 0;
+                _time = 0;
+                if (!_repeat)
                     _running = false;
-                }
             }
         }
+    }
+
+    public void StartTimer()
+    {
+        _time = 0;
+        _running = true;
     }
 }

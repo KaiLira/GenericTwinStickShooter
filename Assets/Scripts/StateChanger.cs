@@ -9,7 +9,7 @@ public class StateChanger : MonoBehaviour
     {
         SetState = 0,
         PushState = 1,
-        PopState = 2,
+        PopStates = 2,
     }
 
     [SerializeField]
@@ -18,6 +18,8 @@ public class StateChanger : MonoBehaviour
     private GameObject _state;
     [SerializeField]
     private ChangeType _changeType = ChangeType.SetState;
+    [SerializeField, Min(1)]
+    private int _popCount = 1;
 
     public void ChangeState()
     {
@@ -26,8 +28,8 @@ public class StateChanger : MonoBehaviour
             case ChangeType.PushState:
                 _stateMachine.PushState(_state);
                 break;
-            case ChangeType.PopState:
-                _stateMachine.PopState();
+            case ChangeType.PopStates:
+                _stateMachine.PopStates(_popCount);
                 break;
             case ChangeType.SetState:
                 _stateMachine.SetState(_state);
