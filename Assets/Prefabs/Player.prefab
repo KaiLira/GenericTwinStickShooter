@@ -726,6 +726,7 @@ GameObject:
   - component: {fileID: 3447089727422102131}
   - component: {fileID: 3186243277181524393}
   - component: {fileID: 1818808189619484881}
+  - component: {fileID: 180612729508609452}
   - component: {fileID: 3286254733939933400}
   m_Layer: 0
   m_Name: DashState
@@ -785,6 +786,48 @@ MonoBehaviour:
       - m_Target: {fileID: 3286254733939933400}
         m_TargetAssemblyTypeName: StateChanger, Assembly-CSharp
         m_MethodName: ChangeState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &180612729508609452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8796242039615970237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9515cb51fbabc084784f9d6bf2193760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5008514665869739305}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: MakeInvulnerable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onDisable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5008514665869739305}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: MakeVulnerable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

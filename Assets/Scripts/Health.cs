@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     [SerializeField] private UnityEvent _onChangeHealth;
     [SerializeField] private UnityEvent _onZeroHealth;
     private int _health;
+    private bool _invulnerable = false;
 
     public int Hp
     {
@@ -27,9 +28,22 @@ public class Health : MonoBehaviour
 
     public void DealDamage(int amount)
     {
+        if (_invulnerable)
+            return;
+
         _health -= amount;
         _onChangeHealth?.Invoke();
         if (_health <= 0)
             _onZeroHealth?.Invoke();
+    }
+
+    public void MakeInvulnerable()
+    {
+        _invulnerable = true;
+    }
+
+    public void MakeVulnerable()
+    {
+        _invulnerable = false;
     }
 }
