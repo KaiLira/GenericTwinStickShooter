@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class Pool : MonoBehaviour
@@ -32,10 +31,18 @@ public class Pool : MonoBehaviour
 
     public int Spawn(Vector3 pos, Quaternion rot)
     {
-        int id = _inactives.Pop();
-        GameObject instance = transform.GetChild(id).gameObject;
-        instance.transform.SetPositionAndRotation(pos, rot);
-        instance.SetActive(true);
+        if (!_inactives.TryPop(out int id))
+            return -1;
+
+        Transform instance = transform.GetChild(id);
+        instance.SetPositionAndRotation(pos, rot);
+        instance.gameObject.SetActive(true);
         return id;
+    }
+
+    public void Return(int id)
+    {
+        transform.GetChild(id).gameObject.SetActive(false);
+        _inactives.Push(id);
     }
 }
