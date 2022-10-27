@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class ChangeDiractionWithInput : MonoBehaviour
+{
+    [SerializeField]
+    private DirectionHolder _directionHolder;
+
+    public void UpdateDirection(InputAction.CallbackContext context)
+    {
+        _directionHolder.Direction = context.ReadValue<Vector2>();
+    }
+}
