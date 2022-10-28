@@ -15,7 +15,7 @@ public class LookAtMouse : MonoBehaviour
 
         _prevMouse = mousePos;
         transform.rotation = Utils.Rotation(
-            Utils.Angle(transform.position,
+            Utils.AngleBetween(transform.position,
             Camera.main.ScreenToWorldPoint(mousePos)
             )
         );

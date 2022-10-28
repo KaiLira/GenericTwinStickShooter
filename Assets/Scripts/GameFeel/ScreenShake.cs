@@ -14,9 +14,10 @@ public class ScreenShake : MonoBehaviour
 
     public void ShakeScreen()
     {
-        _multiplier = _intensity * 0.01f;
+        _multiplier = _intensity * 0.05f;
         _shaking = true;
-        StopCoroutine(_coroutine);
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
         _coroutine = StartCoroutine(_stopShaking());
     }
 
@@ -32,6 +33,6 @@ public class ScreenShake : MonoBehaviour
             return;
 
         Camera.main.transform.Translate(Vector2.one.normalized * _multiplier);
-        _multiplier *= -0.90f;
+        _multiplier *= -0.9f;
     }
 }
