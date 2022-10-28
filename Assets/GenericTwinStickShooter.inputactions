@@ -15,7 +15,16 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Look",
+                    "name": "Look (Mouse)",
+                    "type": "Value",
+                    "id": "075fe3e8-2404-4b69-b8d1-d160bb1e157a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look (Controller)",
                     "type": "Value",
                     "id": "b7dd1ce0-5629-46e4-853a-29e255bc83e3",
                     "expectedControlType": "Vector2",
@@ -191,18 +200,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8c8e490b-c610-4785-884f-f04217b23ca4",
-                    "path": "<Pointer>/delta",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse;Touch",
-                    "action": "Look",
+                    "action": "Look (Controller)",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -213,7 +211,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Look",
+                    "action": "Look (Controller)",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -313,6 +311,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef141c8c-ea33-40d2-96c8-f68f8b29ced6",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Look (Mouse)",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

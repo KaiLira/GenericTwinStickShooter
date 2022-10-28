@@ -48,13 +48,13 @@ public class SpawnerEditor : Editor
         EditorGUILayout.Space();
 
         _randomizeAngle.boolValue = EditorGUILayout.Toggle(
-            "Randomize Angle",
+            "Randomize AngleBetween",
             _randomizeAngle.boolValue
             );
 
         if (_randomizeAngle.boolValue)
             _angle.floatValue = EditorGUILayout.Slider(
-                "Angle",
+                "AngleBetween",
                 _angle.floatValue * 2,
                 0f,
                 360f

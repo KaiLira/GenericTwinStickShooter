@@ -18,7 +18,7 @@ public class RotateWithAxes : MonoBehaviour
             return;
 
         transform.rotation = Utils.Rotation(
-            Utils.Angle(
+            Utils.AngleBetween(
                 Vector2.zero,
                 new Vector2(horizontal, -veritcal)
             )

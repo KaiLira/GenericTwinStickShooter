@@ -17,7 +17,7 @@ public class RotateObjectTowardsTarget : MonoBehaviour
     {
         Vector2 posObj = _object.position;
         Vector2 posTarget = _targetHolder.Target.transform.position;
-        float angle = Utils.Angle(posObj, posTarget) + _offset;
+        float angle = Utils.AngleBetween(posObj, posTarget) + _offset;
 
         _object.rotation = Quaternion.Lerp(
             transform.rotation,

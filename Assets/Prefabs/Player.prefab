@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 5366978614764197104}
   - component: {fileID: 8396762136530798214}
   - component: {fileID: 7775279234112709927}
+  - component: {fileID: 3958379979945005285}
   m_Layer: 0
   m_Name: RunState
   m_TagString: Untagged
@@ -245,6 +246,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3958379979945005285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015564992456517869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2711a1f8429858d46ba063f77068a61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _object: {fileID: 6975659848800066566}
 --- !u!1 &3890960374494477373
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,8 +350,6 @@ GameObject:
   - component: {fileID: 7798931271410752351}
   - component: {fileID: 3979891210599952140}
   - component: {fileID: 1214796382417771114}
-  - component: {fileID: 8140320833288841216}
-  - component: {fileID: 7146315621722564250}
   - component: {fileID: 5008514665869739305}
   - component: {fileID: 225653647979400076}
   - component: {fileID: 9090726291696059336}
@@ -454,32 +466,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8140320833288841216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939376930768700495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8a42f71c77fadb4b92852e4172ce0c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _horizontalAxis: Aim Horizontal
-  _veritcalAxis: Aim Vertical
---- !u!114 &7146315621722564250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939376930768700495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9f2a00d5b86fdf4bb4f47ab80f68722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5008514665869739305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +740,19 @@ MonoBehaviour:
     m_ActionId: b90a2925-ed56-4187-9138-8868bfd796ca
     m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3958379979945005285}
+        m_TargetAssemblyTypeName: RotateObjectWithInput, Assembly-CSharp
+        m_MethodName: ControllerLookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b7dd1ce0-5629-46e4-853a-29e255bc83e3
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
@@ -845,6 +843,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4d6ead91-1e86-4985-b926-9d3d0ce16f93
     m_ActionName: Player/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3958379979945005285}
+        m_TargetAssemblyTypeName: RotateObjectWithInput, Assembly-CSharp
+        m_MethodName: MouseLookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 075fe3e8-2404-4b69-b8d1-d160bb1e157a
+    m_ActionName: Player/Look (Mouse)[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
