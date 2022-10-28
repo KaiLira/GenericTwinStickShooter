@@ -283,8 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9adfbc60fdcc2a348b1a912a499f608e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
-  _targetHolder: {fileID: 519420035}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +427,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1628251702294828043, guid: 6896775d69bd50e48b07de1b0e4c0f16, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 5f03cdca3a7c34c428e3a412b945f542, type: 3}
     - target: {fileID: 3313419472614817097, guid: 6896775d69bd50e48b07de1b0e4c0f16, type: 3}
       propertyPath: _pool
       value: 
