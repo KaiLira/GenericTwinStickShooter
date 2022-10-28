@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 4282617446023477724, guid: 593ca080903828c4ba128b464e74b851, type: 3}
-  _objectCount: 1000
+  _objectCount: 256

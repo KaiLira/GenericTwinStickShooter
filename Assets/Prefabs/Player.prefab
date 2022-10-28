@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8612133508732832806}
+  - component: {fileID: 1586652679827721778}
   - component: {fileID: 2758864672470149619}
   - component: {fileID: 1861078775282352895}
   - component: {fileID: 484528642982129317}
@@ -34,6 +35,36 @@ Transform:
   m_Father: {fileID: 341310028439237050}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1586652679827721778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857556285549039546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b70aceb071bdb4296b373e18b821d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2758864672470149619}
+        m_TargetAssemblyTypeName: BranchTimerRunning, Assembly-CSharp
+        m_MethodName: Banch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _buttonReleased:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2758864672470149619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +151,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8009704859954921128}
   - component: {fileID: 5366978614764197104}
+  - component: {fileID: 8396762136530798214}
+  - component: {fileID: 7775279234112709927}
   m_Layer: 0
   m_Name: RunState
   m_TagString: Untagged
@@ -157,6 +190,61 @@ MonoBehaviour:
   _object: {fileID: 341310028439237050}
   _speed: 15
   _directionHolder: {fileID: 3493229001435468332}
+--- !u!114 &8396762136530798214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015564992456517869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1133096f2b41aad4aa5d24c72dc2d350, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _directionHolder: {fileID: 3493229001435468332}
+--- !u!114 &7775279234112709927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015564992456517869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b70aceb071bdb4296b373e18b821d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621064372169801447}
+        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
+        m_MethodName: TriggerPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _buttonReleased:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621064372169801447}
+        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
+        m_MethodName: TriggerReleased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3890960374494477373
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +338,6 @@ GameObject:
   - component: {fileID: 1214796382417771114}
   - component: {fileID: 8140320833288841216}
   - component: {fileID: 7146315621722564250}
-  - component: {fileID: 4329463778955223564}
   - component: {fileID: 5008514665869739305}
   - component: {fileID: 225653647979400076}
   - component: {fileID: 9090726291696059336}
@@ -393,49 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f2a00d5b86fdf4bb4f47ab80f68722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4329463778955223564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939376930768700495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72bde6379c8d1214f9df61b6d068c1ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _axisName: Fire1
-  _onDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1621064372169801447}
-        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
-        m_MethodName: TriggerPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1621064372169801447}
-        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
-        m_MethodName: TriggerReleased
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5008514665869739305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,7 +657,6 @@ GameObject:
   - component: {fileID: 3493229001435468332}
   - component: {fileID: 8185888147683876704}
   - component: {fileID: 1628251702294828043}
-  - component: {fileID: 3672619433830757211}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -696,8 +739,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3672619433830757211}
-        m_TargetAssemblyTypeName: ChangeDiractionWithInput, Assembly-CSharp
+      - m_Target: {fileID: 8396762136530798214}
+        m_TargetAssemblyTypeName: ChangeDirectionWithInput, Assembly-CSharp
         m_MethodName: UpdateDirection
         m_Mode: 0
         m_Arguments:
@@ -715,7 +758,19 @@ MonoBehaviour:
     m_ActionId: b7dd1ce0-5629-46e4-853a-29e255bc83e3
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta,/Pen/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7775279234112709927}
+        m_TargetAssemblyTypeName: ButtonInputToEvents, Assembly-CSharp
+        m_MethodName: ProcessEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4749dbdd-d127-425c-91ff-7d8891652653
     m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
@@ -760,10 +815,10 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2758864672470149619}
-        m_TargetAssemblyTypeName: BranchTimerRunning, Assembly-CSharp
-        m_MethodName: Banch
-        m_Mode: 1
+      - m_Target: {fileID: 1586652679827721778}
+        m_TargetAssemblyTypeName: ButtonInputToEvents, Assembly-CSharp
+        m_MethodName: ProcessEvent
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -774,24 +829,27 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ca3f73f4-28f3-48e1-8e38-565a8e8349e7
     m_ActionName: Player/Dash[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1621064372169801445}
+        m_TargetAssemblyTypeName: Ammo, Assembly-CSharp
+        m_MethodName: Reload
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d6ead91-1e86-4985-b926-9d3d0ce16f93
+    m_ActionName: Player/Reload[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &3672619433830757211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6754909634325476869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1133096f2b41aad4aa5d24c72dc2d350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _directionHolder: {fileID: 3493229001435468332}
 --- !u!1 &8796242039615970237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1256,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6363795276632561316, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
   m_PrefabInstance: {fileID: 5633883714351458373}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621064372169801445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6363795276632561312, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
+  m_PrefabInstance: {fileID: 5633883714351458373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09875ac46ed7ba4280c5bb43448d1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1621064372169801447 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6363795276632561314, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}

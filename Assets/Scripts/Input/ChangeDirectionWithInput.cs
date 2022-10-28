@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ChangeDiractionWithInput : MonoBehaviour
+public class ChangeDirectionWithInput : MonoBehaviour
 {
     [SerializeField]
     private DirectionHolder _directionHolder;
