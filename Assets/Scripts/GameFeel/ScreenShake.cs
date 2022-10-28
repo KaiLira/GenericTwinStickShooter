@@ -16,7 +16,8 @@ public class ScreenShake : MonoBehaviour
     {
         _multiplier = _intensity * 0.01f;
         _shaking = true;
-        StopCoroutine(_coroutine);
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
         _coroutine = StartCoroutine(_stopShaking());
     }
 
