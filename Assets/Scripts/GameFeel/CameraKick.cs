@@ -9,13 +9,11 @@ public class CameraKick : MonoBehaviour
 
     public void KickCamera()
     {
-        float angle = transform.rotation.eulerAngles.z * Mathf.Deg2Rad;
-
-        Vector2 displacement = new(
-            -_distance * Mathf.Cos(angle),
-            -_distance * Mathf.Sin(angle)
+        Camera.main.transform.Translate(
+            Utils.VecFromComponents(
+                -_distance,
+                transform.rotation.eulerAngles.z
+                )
             );
-
-        Camera.main.transform.Translate(displacement);
     }
 }

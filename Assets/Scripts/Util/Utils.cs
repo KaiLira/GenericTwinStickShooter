@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class Utils
@@ -17,5 +18,15 @@ public static class Utils
     public static Quaternion Rotation(float z)
     {
         return Quaternion.Euler(0, 0, z);
+    }
+
+    public static Vector2 VecFromComponents(float magnitude, float angle)
+    {
+        angle *= Mathf.Deg2Rad;
+
+        return new(
+            magnitude * Mathf.Cos(angle),
+            magnitude * Mathf.Sin(angle)
+        );
     }
 }
