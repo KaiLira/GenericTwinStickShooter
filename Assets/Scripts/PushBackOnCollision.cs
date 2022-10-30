@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Collider2D))]
 public class PushBackOnCollision : MonoBehaviour
 {
-    [SerializeField, Min(0f)]
-    private float _distance;
     [SerializeField]
-    private UnityEvent _collided;
+    private Transform _target;
 
-    void OnTriggerEnter2D(Collider2D collider)
+    public void CollisionListener(GameObject collider)
     {
-        var displacement = Utils.VecFromComponents
-            (_distance, transform.rotation.eulerAngles.z);
-        collider.transform.position += new Vector3(displacement.x, displacement.y, 0);
-        _collided?.Invoke();
+        if (!collider.TryGetComponent<PushBackTag>(out var tag))
+            return;
+
+        Vector2 displacement = Utils.VecFromComponents(
+            tag.Distance,
+            collider.transform.rotation.eulerAngles.z
+            );
+        _target.position += new Vector3(displacement.x, displacement.y, 0);
     }
 }

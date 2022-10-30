@@ -353,6 +353,9 @@ GameObject:
   - component: {fileID: 5008514665869739305}
   - component: {fileID: 225653647979400076}
   - component: {fileID: 9090726291696059336}
+  - component: {fileID: 4096028475155421374}
+  - component: {fileID: 7065249738090558084}
+  - component: {fileID: 3777910531530345199}
   m_Layer: 0
   m_Name: ActualPlayer
   m_TagString: Player
@@ -548,6 +551,112 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 6754909634325476869}
+--- !u!114 &4096028475155421374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939376930768700495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a7f3318b8644e4882cbe8cb9d64865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _solidCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7065249738090558084}
+        m_TargetAssemblyTypeName: DamageByCollision, Assembly-CSharp
+        m_MethodName: ListenToCollision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3777910531530345199}
+        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
+        m_MethodName: CollisionListener
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _triggerCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7065249738090558084}
+        m_TargetAssemblyTypeName: DamageByCollision, Assembly-CSharp
+        m_MethodName: ListenToCollision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3777910531530345199}
+        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
+        m_MethodName: CollisionListener
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7065249738090558084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939376930768700495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba47e4067946c445877d2c722b36d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5008514665869739305}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: DealDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3777910531530345199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939376930768700495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a893b2313a47684f983d45a4f876316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 341310028439237050}
 --- !u!1 &6577304587361294498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1467,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6363795275384927600, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
   m_PrefabInstance: {fileID: 5633883714351458373}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5217932072177026600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621064373414288693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4407c60155be7e8469e870d8be282ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 1
 --- !u!114 &6307292869739010424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,16 +1494,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _intensity: 10
   _duration: 0.25
---- !u!114 &5217932072177026600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621064373414288693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4407c60155be7e8469e870d8be282ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distance: 1

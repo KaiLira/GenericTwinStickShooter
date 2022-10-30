@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 6088698740865804455}
   - component: {fileID: 1273831483105041508}
   - component: {fileID: 4028276222075155921}
-  - component: {fileID: 6165805926674510021}
-  - component: {fileID: 37113494151989179}
   - component: {fileID: 3976435057155994072}
   - component: {fileID: 1945250897230580950}
   - component: {fileID: 8420693223234715441}
+  - component: {fileID: 6015074696545287868}
   - component: {fileID: 4115379342809494755}
+  - component: {fileID: 5257633858383327546}
+  - component: {fileID: 9027851362824335444}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -186,50 +187,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.50000006, y: 0.20000003}
   m_EdgeRadius: 0
---- !u!114 &6165805926674510021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4282617446023477724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1301ad52e6fb11b4a8dce088224c454c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 1
-  _collided:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4115379342809494755}
-        m_TargetAssemblyTypeName: ReturnObjectToPool, Assembly-CSharp
-        m_MethodName: ReturnTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &37113494151989179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4282617446023477724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a893b2313a47684f983d45a4f876316, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _distance: 0.2
-  _collided:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3976435057155994072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +245,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6015074696545287868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282617446023477724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a7f3318b8644e4882cbe8cb9d64865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _solidCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4115379342809494755}
+        m_TargetAssemblyTypeName: ReturnObjectToPool, Assembly-CSharp
+        m_MethodName: ReturnTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _triggerCollision:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4115379342809494755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,3 +288,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 4282617446023477724}
+--- !u!114 &5257633858383327546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282617446023477724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd70ed88df6e844cac4bc4bab43e4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
+--- !u!114 &9027851362824335444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282617446023477724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: befc25632d82f444ab3ae2aa817bfdb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 0.2
