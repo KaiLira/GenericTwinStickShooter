@@ -368,7 +368,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a56aeea4c8c1d34180fe878e43713ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _diection: {x: 1, y: 0}
+  _direction: {x: 1, y: 0}
+  _directionChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8342167517660102581
 MonoBehaviour:
   m_ObjectHideFlags: 0
