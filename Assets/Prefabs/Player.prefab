@@ -347,12 +347,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6975659848800066566}
-  - component: {fileID: 2719296041994479825}
-  - component: {fileID: 1214796382417771114}
   - component: {fileID: 5008514665869739305}
   - component: {fileID: 225653647979400076}
   - component: {fileID: 9090726291696059336}
-  - component: {fileID: 4096028475155421374}
   - component: {fileID: 7065249738090558084}
   - component: {fileID: 3777910531530345199}
   m_Layer: 0
@@ -379,43 +376,6 @@ Transform:
   m_Father: {fileID: 341310028439237050}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &2719296041994479825
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939376930768700495}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.031312466}
-  m_Size: {x: 0.5, y: 0.93737507}
-  m_Direction: 0
---- !u!50 &1214796382417771114
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939376930768700495}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &5008514665869739305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,72 +457,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 6754909634325476869}
---- !u!114 &4096028475155421374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3939376930768700495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55a7f3318b8644e4882cbe8cb9d64865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _solidCollision:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7065249738090558084}
-        m_TargetAssemblyTypeName: DamageByCollision, Assembly-CSharp
-        m_MethodName: ListenToCollision
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3777910531530345199}
-        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
-        m_MethodName: CollisionListener
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _triggerCollision:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7065249738090558084}
-        m_TargetAssemblyTypeName: DamageByCollision, Assembly-CSharp
-        m_MethodName: ListenToCollision
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3777910531530345199}
-        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
-        m_MethodName: CollisionListener
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &7065249738090558084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +513,9 @@ GameObject:
   - component: {fileID: 7819969586964329398}
   - component: {fileID: 8324602003666666294}
   - component: {fileID: 2196505581208144486}
+  - component: {fileID: 8551970408120172739}
+  - component: {fileID: 1602895059449140733}
+  - component: {fileID: 7845940085675367994}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -881,8 +778,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1354340247
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -185447812, guid: cd0e6813c1fd30144afb95970f5adf27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -945,6 +842,119 @@ MonoBehaviour:
   _object: {fileID: 341310028439237050}
   _animator: {fileID: 7819969586964329398}
   _floatName: MovementSpeed
+--- !u!61 &8551970408120172739
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754909634325476869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.75}
+  m_EdgeRadius: 0
+--- !u!50 &1602895059449140733
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754909634325476869}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &7845940085675367994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754909634325476869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a7f3318b8644e4882cbe8cb9d64865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _solidCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7065249738090558084}
+        m_TargetAssemblyTypeName: DamageOnCollision, Assembly-CSharp
+        m_MethodName: ListenToCollision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3777910531530345199}
+        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
+        m_MethodName: CollisionListener
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _triggerCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7065249738090558084}
+        m_TargetAssemblyTypeName: DamageOnCollision, Assembly-CSharp
+        m_MethodName: ListenToCollision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3777910531530345199}
+        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
+        m_MethodName: CollisionListener
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8739483064303023287
 GameObject:
   m_ObjectHideFlags: 0
