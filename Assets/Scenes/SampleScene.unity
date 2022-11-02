@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: _pool
       value: 
       objectReference: {fileID: 1696464572}
+    - target: {fileID: 4274294938026236340, guid: 6896775d69bd50e48b07de1b0e4c0f16, type: 3}
+      propertyPath: _pool
+      value: 
+      objectReference: {fileID: 1696464572}
     - target: {fileID: 6046741604304887742, guid: 6896775d69bd50e48b07de1b0e4c0f16, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -268,7 +272,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 620268063
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -11151,7 +11155,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 620268063
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
