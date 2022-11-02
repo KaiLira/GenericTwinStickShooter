@@ -34,4 +34,9 @@ public class Timer : MonoBehaviour
         _time = 0;
         _running = true;
     }
+
+    public void StopTimer()
+    {
+        _running = false;
+    }
 }

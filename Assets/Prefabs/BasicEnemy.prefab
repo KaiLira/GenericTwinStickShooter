@@ -202,7 +202,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1354340247
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9528302, g: 0.048540328, b: 0.07620864, a: 1}
@@ -384,34 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55a7f3318b8644e4882cbe8cb9d64865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _solidCollision:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7992305601923583352}
-        m_TargetAssemblyTypeName: DamageOnCollision, Assembly-CSharp
-        m_MethodName: ListenToCollision
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7492925565404062550}
-        m_TargetAssemblyTypeName: PushBackOnCollision, Assembly-CSharp
-        m_MethodName: CollisionListener
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _triggerCollision:
+  _onCollision:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7992305601923583352}
