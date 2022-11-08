@@ -10,12 +10,12 @@ public class LerpToObject : MonoBehaviour
     [SerializeField, Min(0f)]
     private float _speed;
 
-    void Update()
+    void FixedUpdate()
     {
         Vector2 xy = Vector2.Lerp(
             transform.position,
             _target.position,
-            _speed * Time.deltaTime
+            _speed * Time.fixedDeltaTime
             );
 
         transform.position = new(xy.x, xy.y, transform.position.z);

@@ -13,7 +13,7 @@ public class AnimatorVectorSetter : MonoBehaviour
 
     public void UpdateDirection(Vector2 dir)
     {
-        if (dir == Vector2.zero)
+        if (!gameObject.activeInHierarchy || dir == Vector2.zero)
             return;
 
         _animator.SetFloat(_nameX, dir.x);
