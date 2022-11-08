@@ -15,6 +15,12 @@ public class AddForceInDirection : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (_directionHolder.Direction == Vector2.zero)
+        {
+            _body.AddForce(_body.velocity * -1);
+            return;
+        }
+
         if (_body.velocity.sqrMagnitude > _maxSpeed * _maxSpeed)
             _body.velocity = Vector2.ClampMagnitude(_body.velocity, _maxSpeed);
         else
