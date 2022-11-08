@@ -13520,6 +13520,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 89067777131839388, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
+      propertyPath: _pool
+      value: 
+      objectReference: {fileID: 1696464572}
     - target: {fileID: 2152903109119542000, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_Name
       value: PhysicsPlayer
@@ -13699,7 +13703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8749490604101629685, guid: ace872ed0813e814288a108e71dadcff, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ace872ed0813e814288a108e71dadcff, type: 3}
