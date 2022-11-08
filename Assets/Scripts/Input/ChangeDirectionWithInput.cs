@@ -10,6 +10,7 @@ public class ChangeDirectionWithInput : MonoBehaviour
 
     public void UpdateDirection(InputAction.CallbackContext context)
     {
-        _directionHolder.Direction = context.ReadValue<Vector2>();
+        if (gameObject.activeInHierarchy)
+            _directionHolder.Direction = context.ReadValue<Vector2>();
     }
 }
