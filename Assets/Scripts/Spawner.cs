@@ -23,7 +23,11 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        Vector3 pos = transform.position;
+        SpawnWithPosition(transform.position);
+    }
+
+    public void SpawnWithPosition(Vector2 pos)
+    {
         Quaternion rot = transform.rotation;
 
         if (_randomizePosition)
