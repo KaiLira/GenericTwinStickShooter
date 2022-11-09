@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6363795275384927601}
-  - component: {fileID: 7193429583391593740}
+  - component: {fileID: 877482418549214019}
   - component: {fileID: 883674994118958406}
   m_Layer: 0
   m_Name: Barrel
@@ -234,7 +234,7 @@ Transform:
   m_Father: {fileID: 363582758253969717}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7193429583391593740
+--- !u!114 &877482418549214019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,11 +246,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7091df282faa88c4895e75bd18ae5a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pool: {fileID: 11400000, guid: 925248853a061f545adc9c2f66d94de4, type: 2}
-  _randomizePosition: 1
-  _maxOffset: {x: 0, y: 0.1}
+  _prefab: {fileID: 4282617446023477724, guid: 593ca080903828c4ba128b464e74b851, type: 3}
+  _randomizePosition: 0
+  _maxOffset: {x: 0, y: 0}
   _randomizeAngle: 1
-  _angle: 7.5
+  _angle: 5
 --- !u!82 &883674994118958406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
   _fire:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7193429583391593740}
+      - m_Target: {fileID: 877482418549214019}
         m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
         m_MethodName: Spawn
         m_Mode: 1
