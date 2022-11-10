@@ -10953,11 +10953,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46fc23d6d6418e4e8dbf7528bfb7dd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 74b53c2ff7805874dbc34a0b1bcc9dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 917010342}
+  _target: {fileID: 644524006}
   _speed: 10
+--- !u!4 &644524006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8325237945572840563, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
+  m_PrefabInstance: {fileID: 1228812597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &665719992
 GameObject:
   m_ObjectHideFlags: 0
@@ -13508,11 +13513,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!4 &917010342 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6651947881506757876, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
-  m_PrefabInstance: {fileID: 1228812597}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1055209418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13593,13 +13593,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 2152903109119542000, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6651947881506757876, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6651947881506757876, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.73
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6651947881506757876, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13650,6 +13654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2921403632884167489, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
+      propertyPath: _duration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13680,11 +13688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 40.1278
+      value: 38.2181
       objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 23.3106
+      value: 21.9605
       objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13716,11 +13724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -9.9015
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.3962
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8651212087386373158, guid: 7e4033fe5017a874da7139b3439bb0f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

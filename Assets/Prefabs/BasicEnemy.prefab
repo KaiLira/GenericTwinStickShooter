@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a893b2313a47684f983d45a4f876316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 5626373498685234123}
+  _body: {fileID: 6469697133729067588}
 --- !u!114 &9167320492643626728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +483,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4253593927695456966}
         m_TargetAssemblyTypeName: Health, Assembly-CSharp
         m_MethodName: RestoreHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7679206137522080530}
+        m_TargetAssemblyTypeName: Ammo, Assembly-CSharp
+        m_MethodName: FillAmmo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1057,6 +1069,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b7c464a24fa47949b58a4686ab5a7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7679206137522080530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6363795276632561312, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
+  m_PrefabInstance: {fileID: 3657691858017902002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09875ac46ed7ba4280c5bb43448d1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &7679206137522080534 stripped
