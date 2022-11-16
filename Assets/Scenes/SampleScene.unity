@@ -13577,10 +13577,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 89067777131839388, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
-      propertyPath: _pool
-      value: 
-      objectReference: {fileID: 1696464572}
     - target: {fileID: 951269557634772036, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13592,10 +13588,6 @@ PrefabInstance:
     - target: {fileID: 2152903109119542000, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_Name
       value: PhysicsPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152903109119542000, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6651947881506757876, guid: 179c5a70e350f3444a14438587cc1c1b, type: 3}
       propertyPath: m_RootOrder
@@ -13801,14 +13793,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 488866c815f7bdd4bb745441fdfa56b9, type: 3}
---- !u!114 &1696464572 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3324403423288985455, guid: 488866c815f7bdd4bb745441fdfa56b9, type: 3}
-  m_PrefabInstance: {fileID: 1696464571}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ac7cd3e02d1ff48949e502ef551ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

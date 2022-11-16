@@ -5,10 +5,14 @@ using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float _duration;
-    [SerializeField] private bool _repeat = false;
-    [SerializeField] private bool _running = false;
-    [SerializeField] private UnityEvent _callback;
+    [SerializeField]
+    private float _duration;
+    [SerializeField]
+    private bool _repeat = false;
+    [SerializeField]
+    private bool _running = false;
+    [SerializeField]
+    private UnityEvent _callback;
     private float _time = 0;
 
     public bool Running
@@ -38,5 +42,10 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         _running = false;
+    }
+
+    public void ChangeTime(float percentage)
+    {
+        _duration *= 1 + (percentage / 100);
     }
 }
