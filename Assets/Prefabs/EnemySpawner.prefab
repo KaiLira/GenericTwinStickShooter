@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7091df282faa88c4895e75bd18ae5a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 8749490604101629685, guid: ace872ed0813e814288a108e71dadcff, type: 3}
+  _prefab: {fileID: 5900494973394873875, guid: e4a92ee57e6295e4297b1f4778d424ab, type: 3}
   _randomizePosition: 0
   _maxOffset: {x: 0, y: 0}
   _randomizeAngle: 1
