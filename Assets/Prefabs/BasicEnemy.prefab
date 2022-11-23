@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c6d7a1bf33591438444e146909ae6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 20
+  _maxHealth: 5
   _onChangeHealth:
     m_PersistentCalls:
       m_Calls:
@@ -1055,6 +1055,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8966143161769305958}
     m_Modifications:
+    - target: {fileID: 883674994118958406, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6363795276632561316, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
       propertyPath: m_RootOrder
       value: 2

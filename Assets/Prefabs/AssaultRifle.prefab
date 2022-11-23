@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678837629694866866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.79, y: 0.1, z: 0}
+  m_LocalPosition: {x: 1.2, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_SortingLayerID: -1354340247
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1207391450, guid: 882feebdfd6b6ab4aad4469a3808be04, type: 3}
+  m_Sprite: {fileID: -2022275198, guid: 882feebdfd6b6ab4aad4469a3808be04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6363795275384927600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2, y: 0.1, z: 0}
+  m_LocalPosition: {x: 1.197, y: 0.097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -250,7 +250,7 @@ MonoBehaviour:
   _randomizePosition: 0
   _maxOffset: {x: 0, y: 0}
   _randomizeAngle: 1
-  _angle: 5
+  _angle: 2.5
 --- !u!82 &883674994118958406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -263,8 +263,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 21bbb8c7be95c2242a93de7c8ad609d9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 25b377bf05dad224bbbfac759b34acc5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.8
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -358,9 +358,8 @@ GameObject:
   - component: {fileID: 6363795276632561316}
   - component: {fileID: 6363795276632561314}
   - component: {fileID: 6363795276632561312}
-  - component: {fileID: 6363795276632561313}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: AssaultRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7c464a24fa47949b58a4686ab5a7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fireDelay: 0.2
+  _fireDelay: 0.1
   _fire:
     m_PersistentCalls:
       m_Calls:
@@ -422,15 +421,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09875ac46ed7ba4280c5bb43448d1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxAmmo: 100
-  _magazineSize: 10
+  _maxAmmo: 300
+  _magazineSize: 30
   _reloadTime: 0.5
   _fire:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6363795276632561313}
-        m_TargetAssemblyTypeName: Multishot, Assembly-CSharp
-        m_MethodName: Fire
+      - m_Target: {fileID: 877482418549214019}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -470,35 +469,6 @@ MonoBehaviour:
       - m_Target: {fileID: 6363795276632561312}
         m_TargetAssemblyTypeName: Ammo, Assembly-CSharp
         m_MethodName: Reload
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6363795276632561313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6363795276632561319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42fff1741dc97344a8ab5f657746f7ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _shotCount: 8
-  _maxShotDelay: 0
-  _fire:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 877482418549214019}
-        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
-        m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
