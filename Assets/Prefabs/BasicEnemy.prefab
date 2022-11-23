@@ -130,11 +130,12 @@ GameObject:
   - component: {fileID: 8407608288959446146}
   - component: {fileID: 5238169957156846681}
   - component: {fileID: 4253593927695456966}
-  - component: {fileID: 8412444817493877305}
+  - component: {fileID: 2082820603894567847}
   - component: {fileID: 6553625320859756067}
   - component: {fileID: 8342167517660102581}
   - component: {fileID: 7992305601923583352}
   - component: {fileID: 7492925565404062550}
+  - component: {fileID: 9167320492643626728}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -344,9 +345,9 @@ MonoBehaviour:
   _onZeroHealth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8412444817493877305}
-        m_TargetAssemblyTypeName: DestroyObject, Assembly-CSharp
-        m_MethodName: DestroyTarget
+      - m_Target: {fileID: 2082820603894567847}
+        m_TargetAssemblyTypeName: ReturnObjectToPool, Assembly-CSharp
+        m_MethodName: ReturnTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -356,7 +357,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8412444817493877305
+--- !u!114 &2082820603894567847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2698357594395840547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1960db8df0b0744d9328c667020da37, type: 3}
+  m_Script: {fileID: 11500000, guid: 40a2067dd0990ca4187b339d210bad92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 8749490604101629685}
@@ -463,7 +464,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a893b2313a47684f983d45a4f876316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 5626373498685234123}
+  _body: {fileID: 6469697133729067588}
+--- !u!114 &9167320492643626728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698357594395840547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9515cb51fbabc084784f9d6bf2193760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onEnable:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4253593927695456966}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: RestoreHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7679206137522080530}
+        m_TargetAssemblyTypeName: Ammo, Assembly-CSharp
+        m_MethodName: FillAmmo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onDisable:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2950721391712440599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1069,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b7c464a24fa47949b58a4686ab5a7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7679206137522080530 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6363795276632561312, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
+  m_PrefabInstance: {fileID: 3657691858017902002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09875ac46ed7ba4280c5bb43448d1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &7679206137522080534 stripped

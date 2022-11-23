@@ -6,17 +6,18 @@ using UnityEngine.Events;
 public class PushBackOnCollision : MonoBehaviour
 {
     [SerializeField]
-    private Transform _target;
+    private Rigidbody2D _body;
 
     public void CollisionListener(GameObject collider)
     {
         if (!collider.TryGetComponent<PushBackTag>(out var tag))
             return;
 
-        Vector2 displacement = Utils.VecFromComponents(
+        Vector2 force = Utils.VecFromComponents(
             tag.Distance,
             collider.transform.rotation.eulerAngles.z
             );
-        _target.position += new Vector3(displacement.x, displacement.y, 0);
+
+        _body.AddForce(force, ForceMode2D.Impulse);
     }
 }

@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using UnityEngine;
 
 public class Pool : MonoBehaviour
@@ -12,19 +10,22 @@ public class Pool : MonoBehaviour
     private int _objectCount;
     private Stack<int> _inactives = new();
 
+    public GameObject Prefab
+    {
+        get { return _prefab; }
+    }
+
     void Start()
     {
         _inactives = new();
         int childCount = transform.childCount;
         for (int i = 0; i < childCount; i++)
-        {
-            DestroyImmediate(transform.GetChild(0).gameObject);
-        }
+            Destroy(transform.GetChild(0).gameObject);
 
         for (int i = 0; i < _objectCount; i++)
         {
-            Instantiate(_prefab, transform);
-            transform.GetChild(i).gameObject.SetActive(false);
+            var obj = Instantiate(_prefab, transform);
+            obj.SetActive(false);
             _inactives.Push(i);
         }
     }

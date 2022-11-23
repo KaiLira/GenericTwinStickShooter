@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField, DisallowNull]
-    private Pool _pool;
+    private GameObject _prefab;
     [SerializeField]
     private bool _randomizePosition = false;
     [SerializeField]
     private Vector2 _maxOffset;
+    private Pool _pool;
 
     [SerializeField]
     private bool _randomizeAngle = false;
@@ -20,10 +17,28 @@ public class Spawner : MonoBehaviour
     [Range(0, 180)]
     private float _angle;
 
+    void Start()
+    {
+        var pools = FindObjectsOfType<Pool>();
+        foreach (var pool in pools)
+        {
+            if (_prefab.name == pool.Prefab.name)
+            {
+                _pool = pool;
+                return;
+            }
+        }
+
+        Debug.LogError("Pool not found for " + _prefab);
+    }
 
     public void Spawn()
     {
-        Vector3 pos = transform.position;
+        SpawnWithPosition(transform.position);
+    }
+
+    public void SpawnWithPosition(Vector2 pos)
+    {
         Quaternion rot = transform.rotation;
 
         if (_randomizePosition)

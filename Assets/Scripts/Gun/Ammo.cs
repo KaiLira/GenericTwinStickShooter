@@ -24,7 +24,7 @@ public class Ammo : MonoBehaviour
     private UnityEvent _failedFire;
 
     [ContextMenu("Fill ammo")]
-    private void _fillAmmo()
+    public void FillAmmo()
     {
         _ammo = _maxAmmo;
         _inMagazine = _magazineSize;
@@ -32,7 +32,7 @@ public class Ammo : MonoBehaviour
 
     void Start()
     {
-        _fillAmmo();        
+        FillAmmo();        
     }
 
     public void Fire()

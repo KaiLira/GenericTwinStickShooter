@@ -26,6 +26,11 @@ public class Health : MonoBehaviour
         _health = _maxHealth;
     }
 
+    public void RestoreHealth()
+    {
+        _health = _maxHealth;
+    }
+
     public void DealDamage(int amount)
     {
         if (_invulnerable)
