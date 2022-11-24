@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmmoCrate
       objectReference: {fileID: 0}
+    - target: {fileID: 5738422709660462242, guid: fb203f28f980fda49b3547f1b015bcc4, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8650470139298118808, guid: fb203f28f980fda49b3547f1b015bcc4, type: 3}
       propertyPath: m_SortingLayer
       value: 1

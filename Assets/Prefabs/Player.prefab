@@ -408,6 +408,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d9a5ed38-a4fd-4fff-b982-5c355dc8bc1d
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3258437885269976362}
+        m_TargetAssemblyTypeName: ButtonInputToEvents, Assembly-CSharp
+        m_MethodName: ProcessEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 71244e3c-d946-4eb0-bbd1-a0d89cf8fc98
+    m_ActionName: Player/Pickup[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -602,6 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2679438561142160836}
   - component: {fileID: 5403746544954531306}
+  - component: {fileID: 3788873894231003844}
   m_Layer: 0
   m_Name: Holster
   m_TagString: Untagged
@@ -639,6 +656,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentGun: {fileID: 4231381070975204402}
+--- !u!114 &3788873894231003844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045065475442779849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8bcaa5d61540641b6be4c4d284a03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1.25
 --- !u!1 &7749708818084227483
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1438738439551434973}
+  - component: {fileID: 3961033200140677144}
   - component: {fileID: 8251973183899940425}
   - component: {fileID: 1765388359430078225}
   - component: {fileID: 242210067059136844}
@@ -766,7 +797,7 @@ GameObject:
   - component: {fileID: 4478822422944302818}
   - component: {fileID: 7879232351626460893}
   - component: {fileID: 7878777312007864844}
-  - component: {fileID: 3961033200140677144}
+  - component: {fileID: 3258437885269976362}
   m_Layer: 0
   m_Name: RunState
   m_TagString: Untagged
@@ -789,6 +820,21 @@ Transform:
   m_Father: {fileID: 6651947881506757876}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3961033200140677144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8671195905555026645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d429c1b6b276e024f9049c386ae9dd14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 319490420066438293}
+  _nameX: DirectionX
+  _nameY: DirectionY
 --- !u!114 &8251973183899940425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,7 +1051,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3961033200140677144
+--- !u!114 &3258437885269976362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1014,12 +1060,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 8671195905555026645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d429c1b6b276e024f9049c386ae9dd14, type: 3}
+  m_Script: {fileID: 11500000, guid: dbb8fafc61fc736408bfc386e13a82f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 319490420066438293}
-  _nameX: DirectionX
-  _nameY: DirectionY
+  _buttonPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3788873894231003844}
+        m_TargetAssemblyTypeName: PickupObject, Assembly-CSharp
+        m_MethodName: PickupItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _buttonReleased:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7127048373277289104
 PrefabInstance:
   m_ObjectHideFlags: 0
