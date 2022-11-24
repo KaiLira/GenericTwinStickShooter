@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AutoTrigger : MonoBehaviour
+public class AutoTrigger : Trigger
 {
     [SerializeField] private float _fireDelay;
     [SerializeField] private UnityEvent _fire;
     private float _delayCounter = 0f;
     private bool _firing = false;
 
-    public void TriggerPressed()
+    public override void TriggerPressed()
     {
         _firing = true;
     }
 
-    public void TriggerReleased()
+    public override void TriggerReleased()
     {
         _firing = false;
     }

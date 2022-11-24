@@ -862,8 +862,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2841644250734126227}
-        m_TargetAssemblyTypeName: ZeroTransform, Assembly-CSharp
-        m_MethodName: ZeroTarget
+        m_TargetAssemblyTypeName: TransformCopy, Assembly-CSharp
+        m_MethodName: CopyTransform
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -888,7 +888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98cdf98493fd6a45acf41622b07129b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transform: {fileID: 8966143161769305958}
+  _source: {fileID: 5626373498685234123}
+  _target: {fileID: 8966143161769305958}
 --- !u!1 &8841904671809713185
 GameObject:
   m_ObjectHideFlags: 0

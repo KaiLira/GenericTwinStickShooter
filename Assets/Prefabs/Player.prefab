@@ -601,6 +601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2679438561142160836}
+  - component: {fileID: 5403746544954531306}
   m_Layer: 0
   m_Name: Holster
   m_TagString: Untagged
@@ -625,6 +626,19 @@ Transform:
   m_Father: {fileID: 6651947881506757876}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5403746544954531306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045065475442779849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef49caf043a7674a999cbd72bed8c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentGun: {fileID: 4231381070975204402}
 --- !u!1 &7749708818084227483
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,8 +876,8 @@ MonoBehaviour:
   _buttonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4231381070975204402}
-        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
+      - m_Target: {fileID: 5403746544954531306}
+        m_TargetAssemblyTypeName: FireCurrentGun, Assembly-CSharp
         m_MethodName: TriggerPressed
         m_Mode: 1
         m_Arguments:
@@ -877,8 +891,8 @@ MonoBehaviour:
   _buttonReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4231381070975204402}
-        m_TargetAssemblyTypeName: AutoTrigger, Assembly-CSharp
+      - m_Target: {fileID: 5403746544954531306}
+        m_TargetAssemblyTypeName: FireCurrentGun, Assembly-CSharp
         m_MethodName: TriggerReleased
         m_Mode: 1
         m_Arguments:
@@ -974,6 +988,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 730877920748391621}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5403746544954531306}
+        m_TargetAssemblyTypeName: FireCurrentGun, Assembly-CSharp
+        m_MethodName: TriggerReleased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1108,6 +1134,10 @@ PrefabInstance:
     - target: {fileID: 6363795276632561319, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
       propertyPath: m_Name
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363795276632561319, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
