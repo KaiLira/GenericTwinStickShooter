@@ -6,6 +6,8 @@ public class PickupObject : MonoBehaviour
 {
     [SerializeField]
     private float range = 1;
+    [SerializeField]
+    private Holster _holster;
 
     public void PickupItem()
     {
@@ -15,10 +17,7 @@ public class PickupObject : MonoBehaviour
             {
                 gO.transform.parent = transform;
                 gO.transform.localPosition = Vector2.right;
-                
-                // if (gO.GetComponent<Rigidbody>() != null)
-                //     gO.GetComponent<Rigidbody2D>().drag = 0;
-
+                _holster.SetGun(gO.GetComponent<Trigger>());
                 return;
             }
         }

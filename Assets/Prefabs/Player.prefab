@@ -669,6 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1.25
+  _holster: {fileID: 5403746544954531306}
 --- !u!1 &7749708818084227483
 GameObject:
   m_ObjectHideFlags: 0
