@@ -354,9 +354,9 @@ MonoBehaviour:
     m_ActionName: Player/Dash[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4231381070975204400}
-        m_TargetAssemblyTypeName: Ammo, Assembly-CSharp
-        m_MethodName: Reload
+      - m_Target: {fileID: 11400000, guid: 5fee131dc2b180845a2f7a6d3d965b51, type: 2}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ReloadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -424,6 +424,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 71244e3c-d946-4eb0-bbd1-a0d89cf8fc98
     m_ActionName: Player/Pickup[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5fee131dc2b180845a2f7a6d3d965b51, type: 2}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d61497f4-a2b9-4a68-af3e-0471e76760e2
+    m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5fee131dc2b180845a2f7a6d3d965b51, type: 2}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UnpauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ee7f08c8-2a72-4c66-9fce-50e0db57830b
+    m_ActionName: Player/Unpause[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -656,6 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentGun: {fileID: 4231381070975204402}
+  _previousGun: {fileID: 0}
 --- !u!114 &3788873894231003844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,17 +1268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distance: 0.5
---- !u!114 &4231381070975204400 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6363795276632561312, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
-  m_PrefabInstance: {fileID: 7127048373277289104}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e09875ac46ed7ba4280c5bb43448d1c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4231381070975204402 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6363795276632561314, guid: 6b57670ee1f17414bbf1fa055de6e466, type: 3}
